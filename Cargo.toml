@@ -6,5 +6,7 @@ edition = "2024"
 [dependencies]
 chrono = { version = "0.4.44", features = ["serde"] }
 csv = "1.4.0"
+diesel = { version = "2.3.6", features = ["sqlite", "chrono"] }
+dotenvy = "0.15.7"
 encoding_rs = "0.8.35"
 serde = { version = "1.0.228", features = ["derive"] }
