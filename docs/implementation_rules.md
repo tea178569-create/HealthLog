@@ -17,6 +17,7 @@
 - 🚨 `:rotating_light:` **test** (Tests)
 - 🗑️ `:wastebasket:` **remove** (Removal)
 - 🚧 `:construction:` **WIP** (Work In Progress)
+- 🔀 `:twisted_rightwards_arrows:` **merge** (Merge Branch)
 
 ### フォーマット
 
@@ -47,3 +48,13 @@ src/
 │   └── ui/        # UI・ビュー (Dioxus Components, Views, EvalJS)
 └── main.rs        # 依存性の注入 (Dependency Injection) とアプリケーションの起動
 ```
+
+## コーディング規約
+
+### コメント・ログ出力のテイスト
+コード内のコメントやログ出力は、以下のルールで統一します。
+
+- **文体**: 「だ/である」調を使用し、「です/ます」調は避ける。ただし、「である」という直接的な表現は極力避け、体言止めなど自然な言い回しにする。
+- **句読点**:
+  - 句点（。）は基本的に付けない。
+  - 読点（、）は使用せず、文の区切りがどうしても必要な場合のみカンマと半角スペース（`, `）を使用する。
