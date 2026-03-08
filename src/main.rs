@@ -3,6 +3,11 @@
 mod domain;
 mod infra;
 
+use infra::ui::App;
+
 fn main() {
-    println!("Hello, world!");
+    println!("Starting MyHealthLog application...");
+
+    // Dioxus デスクトップアプリを起動
+    dioxus::launch(App);
 }
