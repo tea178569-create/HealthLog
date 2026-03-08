@@ -21,25 +21,24 @@ pub fn initialize_dummy_data(repo: &mut SqliteRepository) -> Result<(), Box<dyn 
     // 1. オムロンCSVのダミーデータを読み込んで保存
     let omron_csv_path = "tests/fixtures/dummy_omron.csv";
     if let Ok(csv_data) = fs::read_to_string(omron_csv_path) {
+        #[allow(clippy::collapsible_if)]
         if let Ok(measurements) = parse_omron_csv(&csv_data) {
             let count = measurements.len();
             repo.insert_measurements(measurements)?;
-            println!("Imported {} omron measurements.", count);
+            println!("Imported {count} omron measurements.");
         }
     }
 
     // 2. 献血ログCSVのダミーデータを読み込んで保存
     let blood_csv_path = "tests/fixtures/dummy_blood.csv";
     if let Ok(csv_data) = fs::read_to_string(blood_csv_path) {
+        #[allow(clippy::collapsible_if)]
         if let Ok((measurements, locations)) = parse_blood_csv(&csv_data) {
             let m_count = measurements.len();
             let l_count = locations.len();
             repo.insert_measurements(measurements)?;
             repo.insert_locations(locations)?;
-            println!(
-                "Imported {} blood measurements and {} locations.",
-                m_count, l_count
-            );
+            println!("Imported {m_count} blood measurements and {l_count} locations.");
         }
     }
 

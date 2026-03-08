@@ -14,7 +14,7 @@ fn main() {
     // データベース接続とダミーデータの初期化
     let mut repo = SqliteRepository::new();
     if let Err(e) = initialize_dummy_data(&mut repo) {
-        eprintln!("Failed to initialize DB: {}", e);
+        eprintln!("Failed to initialize DB: {e}");
     }
 
     // Dioxus デスクトップアプリを起動
