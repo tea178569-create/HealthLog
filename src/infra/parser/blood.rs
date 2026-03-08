@@ -152,7 +152,7 @@ mod tests {
         assert_eq!(locations[0].donation_type, "健康診断");
 
         // いずれかの測定データが抽出できていることを確認
-        assert!(measurements.len() > 0);
+        assert!(!measurements.is_empty());
 
         // 最初の行の体重(53.0)が含まれているかチェック
         let has_weight = measurements

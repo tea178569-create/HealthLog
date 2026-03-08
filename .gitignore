@@ -30,3 +30,9 @@ target
 
 # Sample data
 sampleData/
+
+# Database and Environment
+.env
+*.sqlite3
+*.sqlite3-journal
+
